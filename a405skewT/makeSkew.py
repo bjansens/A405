@@ -17,7 +17,7 @@ def makeSkewDry(ax,skew=30):
       Output: ax, skew
       """
       yplot = range(1000,190,-10)
-      xplot = range(-300,-139)
+      xplot = range(-1000,0)
       pvals = np.size(yplot)
       tvals = np.size(xplot)
       temp = np.zeros([pvals, tvals])
@@ -49,7 +49,7 @@ def makeSkewDry(ax,skew=30):
 
       # First, make sure that all plotted lines are solid.
       mpl.rcParams['contour.negative_linestyle'] = 'solid'
-      tempLabels = range(-40, 50, 10)
+      tempLabels = range(-90, 50, 10)
       tempLevs = ax.contour(xplot, yplot, temp, tempLabels, \
                             colors='k')
       
@@ -67,7 +67,7 @@ def makeSkewDry(ax,skew=30):
       ax.yaxis.grid(True)
 
       
-      thetaLabels = list(range(200, 390, 10))
+      thetaLabels = list(range(50, 390, 10))
       thetaLevs = ax.contour(xplot, yplot, theTheta, thetaLabels, \
                         colors='b')
 
@@ -83,14 +83,14 @@ def makeSkewDry(ax,skew=30):
       #    
       
 
-      TempTickLabels = range(-15, 40, 5)
+      TempTickLabels = range(-90, 40, 5)
 
       TempTickCoords = TempTickLabels
       skewTickCoords = convertTempToSkew(TempTickCoords, 1.e3, skew)
       ax.set_xticks(skewTickCoords)
       ax.set_xticklabels(TempTickLabels)
 
-      skewLimits = convertTempToSkew([-15, 35], 1.e3, skew)
+      skewLimits = convertTempToSkew([-60, 35], 1.e3, skew)
 
       ax.axis([skewLimits[0], skewLimits[1], 300, 1.e3])
       #

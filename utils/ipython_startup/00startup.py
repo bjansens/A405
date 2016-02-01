@@ -20,7 +20,7 @@ ip = get_ipython()
 #
 # os.path.sep is '/' on unix and '\' on windows
 #
-a405_repo = r'{0:}{1:}repos{1:}A405'.format(ip.home_dir,os.path.sep)
+a405_repo = r'{0:}{1:}Documents{1:}ATSC405{1:}repos{1:}A405'.format(ip.home_dir,os.path.sep)
 site.addsitedir(a405_repo)
 print('added {} to the path'.format(a405_repo))
 from IPython.core.display import display
