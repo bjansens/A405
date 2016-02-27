@@ -173,12 +173,12 @@ def makeSkewWet(ax, corners=[-30, 25], skew=30):
                   fmt='%3.2g',
                   fontsize=fntsz,
                   use_clabeltext=True)
-    # thetaeLevs.clabel(thetaeLabels,
-    #                   inline_spacing=0,
-    #                   inline=ovrlp,
-    #                   fmt='%5g',
-    #                   fontsize=fntsz,
-    #                   use_clabeltext=True)
+    thetaeLevs.clabel(thetaeLabels,
+                      inline_spacing=0,
+                      inline=ovrlp,
+                      fmt='%5g',
+                      fontsize=fntsz,
+                      use_clabeltext=True)
 
     ax.invert_yaxis()
     #ax.figure.canvas.draw()
