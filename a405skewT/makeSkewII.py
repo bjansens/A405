@@ -101,7 +101,7 @@ def makeSkewWet(ax, corners=[-30, 25], skew=30):
 
     # First, make sure that all plotted lines are solid.
     mpl.rcParams['contour.negative_linestyle'] = 'solid'
-    tempLabels = range(-40, 50, 10)
+    tempLabels = range(-40, 50, 5)
     ax.contour(xplot, yplot, temp, tempLabels, \
                           colors='k')
     #
